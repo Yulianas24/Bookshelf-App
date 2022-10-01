@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Popup input -->
+  <div class="popup" id="popup-input">
+        <div class="box">
+          <form action="#" method="post" class="box-item" id="add_book_form">
+            <h3 style="text-align: center;">Add Book</h3>
+            <hr>
+            <div class="input-box">
+              <label for="title">Title</label>
+              <input type="text" name="title" id="title" required>
+            </div>
+            <div class="input-box">
+              <label for="author">Author</label>
+              <input type="text" name="author" id="author" required>
+            </div>
+            <div class="input-box">
+              <label for="year">Year</label>
+              <input type="number" name="year" id="year" required>
+            </div>
+            <hr>
+            <div class="button-box">
+              <button type="submit" class="btn" id="btn_addBook">SUBMIT</button>
+              <button type="button" class="btn" id="btn_addBook" onclick="closePopup(popup)">CANCEL</button>
+            </div>
+          </form>
+        </div>
+  </div>
+  <!-- end of popup input -->
+
+  <!-- Popup edit -->
+  <div class="popup" id="popup-edit">
+        <div class="box">
+          <form action="#" method="post" class="box-item" id="edit_book_form">
+            <h3 style="text-align: center;">Edit Book</h3>
+            <hr>
+            <div class="input-box">
+              <label for="title">Title</label>
+              <input type="text" name="title" id="edit_title" required>
+            </div>
+            <div class="input-box">
+              <label for="author">Author</label>
+              <input type="text" name="author" id="edit_author" required>
+            </div>
+            <div class="input-box">
+              <label for="year">Year</label>
+              <input type="number" name="year" id="edit_year" required>
+            </div>
+            <hr>
+            <div class="button-box">
+              <button type="submit" class="btn">EDIT</button>
+              <button type="button" class="btn" onclick="closePopup(popup_edit)">CANCEL</button>
+            </div>
+          </form>
+        </div>
+  </div>
+  <!-- end of popup edit -->
+
+  <div class="container">
+    <h1>Bookshelf App</h1>
+    <button class="btn" id="add_book" onclick="openPopup(popup)">Add Book</button>
+    <div class="item-box">
+      <input type="text" id="search" placeholder="search title ..." class="input-text">
+    </div>
+    <hr>
+    <div class="container-box">
+      <article>
+        <h1>Belum Selesai Dibaca</h1>
+        <table >
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th class="action">Action</th>
+              </tr>
+            </thead>
+            <tbody id="belum_dibaca">
+              <!-- Daftar buku yang belum dibaca -->
+            </tbody>
+        </table>
+      </article>
+      <article>
+        <h1>Sudah Selesai Dibaca</h1>
+        <table >
+            <thead>
+              <tr>
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Year</th>
+                  <th class="action">Action</th>
+                </tr>
+              </tr>
+            </thead>
+            <tbody id="sudah_dibaca">
+              <!-- Daftar buku yang sudah dibaca -->
+            </tbody>
+        </table>
+      </article>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

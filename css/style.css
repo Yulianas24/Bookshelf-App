@@ -1,0 +1,188 @@
+body {
+  background-color: #A084CA;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #EBC7E8;
+}
+.popup{
+  width: 30%;
+  min-height: 270px;
+  background-color: #645CAA;
+  position: fixed;
+  left: 35%;
+  margin-top: 100px;
+  border-radius: 10px;
+  border: #353159 2px solid;
+  box-shadow: #353159 5px 5px 3px;
+  padding: 10px;
+  display: none;
+}
+.input-box{
+  margin: 20px;
+  font-size: medium;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.input-box label{
+  flex-basis: 30%;
+  padding-top: 5px;
+}
+.input-box input{
+  height: auto;
+  width: 60%;
+  position: absolute;
+  right: 5%;
+  border: 1px solid #1C6758;
+  background-color: #d4c6e8;
+  border-radius: 5px;
+  padding: 7px;
+}
+.button-box{
+  position: absolute;
+  right: 5%;
+}
+.container{
+  width: 95%;
+  min-height: 600px;
+  background-color: #645CAA;
+  margin: auto;
+  margin-top: 30px;
+  border: 3px solid #BFACE0;
+  border-radius: 20px;
+  text-align: center;
+}
+.container-box{
+  min-height: 500px;
+  display: flex;
+  width: 100%;
+}
+.item-box{
+  position: absolute;
+  margin-top: -81px;
+  right: 5%;
+}
+.btn{
+  background-color: #BFACE0;
+  padding: 7px 20px;
+  border: 1px solid #353159;
+  border-radius: 5px;
+  color: #353159;
+}
+.btn:hover{
+  background-color: #9b7fca;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #353159;
+}
+.input-text{
+  padding: 7px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  background-color: #d3cae1;
+}
+article {
+  width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+}
+table {
+  border-collapse: collapse;
+  width: 96%;
+  margin: 2%;
+  box-shadow: 2px 2px #A084CA;
+}
+.title{
+  width: 45%;
+}
+.action{
+  width: 16%;
+}
+table td, table th {
+  border: 1px solid #645CAA;
+  padding: 5px;
+}
+tbody{
+  background-color: #c4ace8;
+  color: #353159;
+}
+table tr:hover {
+  background-color: #ddd;
+}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #A084CA;
+}
+.swap {
+  width: 25px;
+  height: 25px;
+  background: url('../assets/swap-fill.png');
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+}
+.swap:hover{
+  background-image: url('../assets/swap-outline.png');
+}
+.edit {
+  width: 24px;
+  height: 24px;
+  background: url('../assets/edit-fill.png');
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  margin: 0px 5px;
+}
+.edit:hover{
+  background-image: url('../assets/edit-outline.png');
+}
+.delete {
+  width: 25px;
+  height: 25px;
+  background: url('../assets/trash-fill.png');
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+}
+.delete:hover{
+  background-image: url('../assets/trash-outline.png');
+}
+.check-button:hover {
+  background: url('../assets/check-solid.svg');
+  background-size: contain;
+}
+@media only screen and (max-width:768px){
+  .popup{
+    left: 20%;
+    width: 60%;
+    height: auto;
+  }
+  .item-box{
+    position: static;
+    margin: auto;
+  }
+  .btn{
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width:425px){
+  .popup{
+    left: 6%;
+    width: 80%;
+    height: auto;
+  }
+  .container-box{
+    display: block;
+  }
+  .input-box{
+    margin-left: 10px;
+  }
+  h1{
+    font-size: medium;
+  }
+  article{
+    margin-top: 20px;
+    width: 100%;
+  }
+}
